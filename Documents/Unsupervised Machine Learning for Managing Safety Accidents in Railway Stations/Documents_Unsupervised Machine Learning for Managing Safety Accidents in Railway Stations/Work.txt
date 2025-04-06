@@ -1,0 +1,44 @@
+Service Provider
+
+Login,
+Train & Test Railway Data Sets, 
+View Trained and Tested Railway Data Sets Accuracy in Bar Chart, 
+View Railway Data Sets Trained and Tested Accuracy Results, 
+View Prediction Of Railway Accident Type, 
+View Railway Accident Type Ratio, 
+Download Predicted Data Sets, 
+View Railway Accident Type Ratio Results, 
+View All Remote Users.
+
+
+
+Remote User
+
+
+REGISTER AND LOGIN,
+PREDICT RAILWAY ACCIDENT TYPE,
+View Your Profile.
+
+
+Members
+--------
+
+RID,	
+Location,	
+Latitude,	
+Longitude,	
+Avgpassengersperday,	
+Nooftrainspassing,	
+Nooftrainsstopping,	
+Noofplatforms,	
+Nooftracks,	
+Trainhaltingtime,	
+Avgtrainspeed,	
+Averageaccidentspermonth,	
+population,	
+PhysicalEnvironment,	
+DateTime,	
+admin_found,	
+Label,
+Prediction.
+

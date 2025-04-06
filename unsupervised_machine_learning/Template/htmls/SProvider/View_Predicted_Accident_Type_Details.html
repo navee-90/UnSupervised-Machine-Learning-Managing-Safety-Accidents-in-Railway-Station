@@ -1,0 +1,117 @@
+{% extends 'SProvider/Header.html' %}
+{% block researchblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 1104px;
+    height: 442px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style12 {color: #FFFF00; font-weight: bold; }
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center style1">View Railway Accident Prediction Type Details  !!! </p>
+                            <hr>
+                            <div class="tweettext">
+                               <table border="5" bordercolor="#FF00FF">
+
+
+                                   <tr>
+
+
+                         <td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">RID</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">Location</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">Latitude</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">Longitude	</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">Avg passengers per day</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">No of trains passing</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">No of trains stopping</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">No of platforms</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">No of tracks</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">Train halting time</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">Avg trains peed</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">Average accidents per month</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">population</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">Physical Environment</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">Date and Time</span></div></td>
+<td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">admin_found</span></div></td>
+
+                        <td bgcolor="#FF0000"><div align="center" class="style12"><span class="style8 style6">Prediction</span></div></td>
+
+
+                      </tr>
+                            {% for object in list_objects %}
+                      <tr>
+
+                         <td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.RID}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Location}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Latitude}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Longitude}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Avgpassengersperday}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Nooftrainspassing}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Nooftrainsstopping}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Noofplatforms}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Nooftracks}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Trainhaltingtime}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Avgtrainspeed}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Averageaccidentspermonth}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.population}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.PhysicalEnvironment}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.DateTime}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.admin_found}}</div></td>
+<td bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{object.Prediction}}</div></td>
+
+
+                        </tr>
+
+                                        {% endfor %}
+                      </table>
+
+                            </div>
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>
